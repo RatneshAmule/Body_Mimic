@@ -85,7 +85,7 @@ while cap.isOpened():
         cv2.circle(dummy, head, 6, (0,0,255), -1)
         cv2.line(dummy, head, nose, (0,0,255), 3)
 
-    #hands
+    #hand and finger
     if hand_res.multi_hand_landmarks:
         for hand in hand_res.multi_hand_landmarks:
             mp_draw.draw_landmarks(
@@ -97,7 +97,7 @@ while cap.isOpened():
             )
 
     combined = np.hstack((frame, dummy))
-    cv2.imshow("Mister mime", combined)
+    cv2.imshow("Pratima", combined)
 
     if cv2.waitKey(1) & 0xFF == 27:
         break
