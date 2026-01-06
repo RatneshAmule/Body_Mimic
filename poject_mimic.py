@@ -97,7 +97,7 @@ while cap.isOpened():
             )
 
     combined = np.hstack((frame, dummy))
-    cv2.imshow("FULL BODY + FACE + HANDS MIMIC", combined)
+    cv2.imshow("Mister mime", combined)
 
     if cv2.waitKey(1) & 0xFF == 27:
         break
